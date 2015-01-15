@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_holo_light"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/link_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:hint="@string/input_hint"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/link_input"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/link_input"
+        android:clickable="true"
+        android:minWidth="60dp"
+        android:onClick="createLink"
+        android:padding="0dp"
+        android:text="@string/submit_button"
+        android:textColor="@color/hblue"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/links_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/link_input"
+        android:layout_marginBottom="20dp" >
+    </ListView>
+
+</RelativeLayout>
